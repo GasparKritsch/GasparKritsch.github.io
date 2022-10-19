@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+#headerContainer{
+    height: 14vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-transform: uppercase;
+    background-color: #232323;
+    z-index: 100;
+}
+
+#headerContainer .logo{
+    font-size: 20px;
+    margin: 0 auto 0 40px;
+    font-weight: 600;
+    color: #ff9c0a;
+}
+
+#headerContainer nav ul {
+    display: flex;
+    margin: 3px 40px 0 auto;
+}
+
+#headerContainer nav ul li{
+    font-size: 15px;
+    margin-left: 25px;
+}
+
+#headerContainer nav ul li::after{
+    content: '';
+    width: 0%;
+    display: block;
+    margin: auto;
+    height: 2px;
+    background-color: #ff9c0a;
+    transition: .5s ease;
+}
+
+#headerContainer nav ul li:hover::after{
+    width: 100%;
+}
+
+#headerContainer nav ul li a{
+    color: white;
+    font-weight: 500;
+}
+
+#burger{
+    font-size: 30px;
+    color: #ff9c0a;
+    margin: 0 40px 0 auto;
+    display: none;
+}
+
+#sobreMi{
+    color: white;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: linear-gradient(rgba(48, 48, 48, 0.7),rgba(48, 48, 48, 0.7)),url(./img/keyboard.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.titulo{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    width: 80%;
+    text-align: center;
+}
+
+.descripcion{
+    font-size: 15px;
+    width: 80%;
+}
+
+#tecnologias{
+    background-color: #232323;
+    color: white;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.linea{
+    width: 80%;
+    margin-bottom: 30px;
+}
+
+#tecnologias ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#tecnologias ul li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+#tecnologias ul li span{
+    color: #ff9c0a;
+    margin: 0 5px;
+}
+
+#tecnologias ul li ion-icon{
+    font-size: 30px;
+    margin-right: 5px;
+    color: #ff9c0a;
+}
+
+#tecnologias p{
+    width: 80%;
+    text-align: center;
+    font-size: 15px;
+}
+
+#proyectos{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(48, 48, 48, 0.7),rgba(48, 48, 48, 0.7)),url(./img/keyboard.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #232323;
+    color: white;
+}
+
+#contacto ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contacto ul li{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+#contacto ul li span{
+    color: #ff9c0a;
+    margin: 0 5px;
+}
+
+#contacto ul li a{
+    color: #ff9c0a;
+}
+
+#contacto ul li a:hover{
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width:735px) {
+    #burger{
+        display: block;
+    }
+    #headerContainer nav ul{
+        position: absolute;
+        transform: translateX(100%);
+        width: 100%;
+        height: 86vh;
+        background-color: #232323;
+        margin: 0;
+        top: 14vh;
+        left: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}
+
+/*@media screen and (max-width:675px) {
+    #tecnologias{
+        height: auto;
+        padding:14vh 0;
+    }
+}*/
+
+@media screen and (max-height:740px){
+    #tecnologias{
+        padding: 10vh 0;
+    }
+}
