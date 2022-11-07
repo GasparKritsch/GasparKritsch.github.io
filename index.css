@@ -142,9 +142,9 @@
     font-size: 15px;
 }
 
-#proyectos{
-    height: 100vh;
+#proyectosContainer{
     width: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     color: white;
@@ -154,6 +154,67 @@
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    padding: 50px 0;
+}
+
+.proyectos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.proyectoAgencia, .proyectoClima, .proyectoColores, .proyectoNotas{
+    height: 200px;
+    width: 250px;
+    margin:  30px;
+}
+.proyectoAgencia .img{
+    background-image: url(./img/dealership.jpg);
+    height: 90%;
+    background-position: center;
+    background-size: cover;
+    transition: 0.3s ease-in-out;
+}
+
+.proyectoNotas .img{
+    background-image: url(./img/notes.jpg);
+    height: 90%;
+    background-position: center;
+    background-size: cover;
+    transition: 0.3s ease-in-out;
+}
+
+.proyectoClima .img{
+    background-image: url(./img/weatherImg.jpg);
+    height: 90%;
+    background-position: center;
+    background-size: cover;
+    transition: 0.3s ease-in-out;
+}
+
+.proyectoColores .img{
+    background-image: url(./img/colorPalette.jpg);
+    height: 90%;
+    background-position: center;
+    background-size: cover;
+    transition: 0.3s ease-in-out;
+}
+
+.img:hover{
+    transform: scale(1.05);
+}
+
+.proyectTextContainer{
+    text-align: center;
+    background-color: #ff9c0a;
+    color: #232323;
+}
+
+.proyectTextContainer h3{
+    padding: 10px;
+    font-size: 15px;
+    text-transform: uppercase;
 }
 
 #contacto{
@@ -190,7 +251,6 @@
 #contacto ul li a:hover{
     text-decoration: underline;
 }
-
 
 @media screen and (max-width:735px) {
     body{
@@ -230,5 +290,20 @@
 @media screen and (max-height:740px){
     #tecnologias{
         padding: 10vh 0;
+    }
+}
+
+@media screen and (max-width:930px){
+    .proyecto{
+        flex-direction: column;
+    }
+    .proyecto h3{
+        margin-bottom: 30px;
+    }
+    .proyectoReverse{
+        flex-direction: column;
+    }
+    .proyectoReverse h3{
+        margin-bottom: 30px;
     }
 }
