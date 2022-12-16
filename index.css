@@ -6,10 +6,11 @@
     list-style-type: none;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+    font-weight: 500;
 }
 
 #headerContainer{
-    height: 14vh;
+    height: 12vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -25,7 +26,7 @@
     font-size: 20px;
     margin: 0 auto 0 40px;
     font-weight: 600;
-    color: #ff9c0a;
+    color: #ffff24;
 }
 
 #headerContainer .nav_links {
@@ -34,8 +35,11 @@
 }
 
 #headerContainer .nav_links li{
-    font-size: 15px;
     margin-left: 25px;
+}
+
+#headerContainer .nav_links li a{
+    font-size: 16px;
 }
 
 #headerContainer .nav_links li::after{
@@ -44,7 +48,7 @@
     display: block;
     margin: auto;
     height: 2px;
-    background-color: #ff9c0a;
+    background-color: #ffff24;
     transition: .5s ease;
 }
 
@@ -54,12 +58,11 @@
 
 #headerContainer .nav_links li a{
     color: white;
-    font-weight: 500;
 }
 
 #burger{
     font-size: 30px;
-    color: #ff9c0a;
+    color: #ffff24;
     margin: 0 40px 0 auto;
     display: none;
     cursor: pointer;
@@ -74,15 +77,14 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-image: linear-gradient(rgba(48, 48, 48, 0.7),rgba(48, 48, 48, 0.7)),url(./img/keyboard.jpg);
+    background-image: linear-gradient(rgba(48, 48, 48, 0.7),rgba(48, 48, 48, 0.7)),url(./img/software.jpg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
 }
 
 .titulo{
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 16px;
     margin-bottom: 25px;
     text-transform: uppercase;
     width: 80%;
@@ -91,7 +93,7 @@
 
 .descripcion{
     font-size: 15px;
-    width: 80%;
+    width: 60%;
 }
 
 #tecnologias{
@@ -106,35 +108,22 @@
 }
 
 .linea{
-    width: 80%;
+    width: 60%;
     margin-bottom: 30px;
 }
 
 #tecnologias ul{
     display: flex;
-    flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
     text-align: center;
+    width: 50%;
 }
 
-#tecnologias ul li{
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    font-size: 15px;
+#tecnologias ul li img{
+    width: 50%;
 }
 
-#tecnologias ul li span{
-    color: #ff9c0a;
-    margin: 0 5px;
-}
-
-#tecnologias ul li ion-icon{
-    font-size: 30px;
-    margin-right: 5px;
-    color: #ff9c0a;
-}
 
 #tecnologias p{
     width: 80%;
@@ -150,7 +139,7 @@
     color: white;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(rgba(48, 48, 48, 0.7),rgba(48, 48, 48, 0.7)),url(./img/keyboard.jpg);
+    background-image: linear-gradient(rgba(48, 48, 48, 0.7),rgba(48, 48, 48, 0.7)),url(./img/software.jpg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -162,15 +151,25 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    width: 75%;
 }
 
-.proyectoAgencia, .proyectoClima, .proyectoColores, .proyectoNotas{
-    height: 200px;
+.westEssences, .portfolioPipeta, .proyectoClima, .proyectoColores, .proyectoNotas{
+    height: 180px;
     width: 250px;
     margin:  30px;
 }
-.proyectoAgencia .img{
-    background-image: url(./img/dealership.jpg);
+
+.westEssences .img{
+    background-image: url(./img/smoke.jpg);
+    height: 90%;
+    background-position: center;
+    background-size: cover;
+    transition: 0.3s ease-in-out;
+}
+
+.portfolioPipeta .img{
+    background-image: url(./img/pipeta.jpg);
     height: 90%;
     background-position: center;
     background-size: cover;
@@ -207,13 +206,13 @@
 
 .proyectTextContainer{
     text-align: center;
-    background-color: #ff9c0a;
-    color: #232323;
+    background-color: #232323;
+    color: white;
 }
 
 .proyectTextContainer h3{
     padding: 10px;
-    font-size: 15px;
+    font-size: 14px;
     text-transform: uppercase;
 }
 
@@ -240,12 +239,12 @@
 }
 
 #contacto ul li span{
-    color: #ff9c0a;
+    color: #ffff24;
     margin: 0 5px;
 }
 
 #contacto ul li a{
-    color: #ff9c0a;
+    color: #ffff24;
 }
 
 #contacto ul li a:hover{
@@ -261,6 +260,10 @@
         display: block;
     }
 
+    #tecnologias ul{
+        width: 75%;
+    }
+
     #headerContainer .nav_links{
         position: absolute;
         transform: translateX(100%);
@@ -269,7 +272,8 @@
         height: 86vh;
         background-color: #232323;
         margin: 0;
-        top: 14vh;
+        top: 12vh;
+        padding-bottom: 15vh;
         left: 0;
         flex-direction: column;
         align-items: center;
@@ -286,14 +290,10 @@
 
 }
 
-
-@media screen and (max-height:740px){
-    #tecnologias{
-        padding: 10vh 0;
-    }
-}
-
 @media screen and (max-width:930px){
+    #tecnologias ul li img{
+        width: 60%;
+    }
     .proyecto{
         flex-direction: column;
     }
